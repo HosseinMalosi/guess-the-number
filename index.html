@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guess The Number</h1>
+      <p>&#60; Between 1 and 20 &#62;</p>
+    </header>
+    <main>
+      <section class="flex_item" id="check_section">
+        <div id="secret_number">?</div>
+        <div id="guess_form">
+          <input id="guess" type="number" min="0" max="20" />
+          <div id="buttons">
+            <button id="check" class="btn">Check</button>
+            <button id="again" class="btn">Again</button>
+          </div>
+        </div>
+      </section>
+      <section class="flex_item" id="messages">
+        <p id="message">Start Guessing ...</p>
+        <p>Score : <span id="score">20</span></p>
+        <p>Highscore : <span id="highscore">0</span></p>
+      </section>
+    </main>
+    <script src="guess.js"></script>
+  </body>
+</html>

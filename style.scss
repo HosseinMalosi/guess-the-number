@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:wght@400;600;800&display=swap");
+
+$color_1: #333333;
+$color_2: #ccb858;
+$color_3: #cc7e7e;
+$color_4: #39ccc2;
+
+$open: "Open Sans", sans-serif;
+$bungee: "Bungee", cursive;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color_1;
+  margin: 0 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  color: white;
+
+  h1 {
+    font-family: $bungee;
+    font-size: 50px;
+    flex: 1;
+  }
+
+  p {
+    padding: 0 0 30px 0;
+    font-family: $open;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 100px 0;
+  color: white;
+
+  .flex_item {
+    flex: 4;
+  }
+
+  .flex_item:nth-child(2) {
+    flex: 3;
+  }
+}
+
+#check_section {
+  display: flex;
+  flex-direction: column;
+}
+#secret_number {
+  background-color: $color_2;
+  color: $color_1;
+  max-width: 400px;
+  height: 150px;
+  font-size: 64px;
+  font-family: $bungee;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#guess_form {
+  display: flex;
+  max-width: 400px;
+  justify-content: space-between;
+}
+#guess {
+  border: 2px solid white;
+  background-color: $color_1;
+  color: white;
+  font-family: $bungee;
+  font-size: 50px;
+  max-width: 200px;
+  height: 127px;
+  padding-left: 30px;
+}
+#buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btn {
+  width: 100px;
+  height: 44px;
+  font-family: $open;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+#check {
+  font-weight: 800;
+  font-size: 20px;
+  background-color: $color_4;
+  border: none;
+}
+
+#again {
+  font-weight: 600;
+  font-size: 18px;
+  background-color: $color_3;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-family: $open;
+  font-weight: 600;
+  p {
+    flex: 1;
+    padding: 30px 0 0 0;
+
+    &:nth-of-type(1) {
+      padding: 0;
+      flex: 3;
+      font-weight: 800;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  body {
+    margin: 0 20px;
+    
+  }
+
+  main{
+    margin:50px 0;
+  }
+
+  header {
+    flex-direction: column;
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  #guess_form {
+    flex-direction: column;
+  }
+  #buttons {
+    flex-direction: column;
+  }
+  #secret_number {
+    width: 100%;
+  }
+  #messages {
+    font-size: 18px;
+    margin-left: 10px;
+    p {
+      flex: 0;
+
+      &:nth-of-type(1) {
+        flex: 0;
+      }
+    }
+  }
+  #guess {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .btn {
+    padding: 5px;
+    font-size: 18px;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
